@@ -4,12 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "react-scripts start",
-    "start": "serve -s build",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open"
   },
   "author": "Luther Barragan",
   "license": "ISC",
@@ -24,7 +21,6 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "babel-polyfill": "^6.26.0",
-    "serve": "^9.4.0"
+    "babel-polyfill": "^6.26.0"
   }
 }
